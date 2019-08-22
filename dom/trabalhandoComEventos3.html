@@ -1,0 +1,76 @@
+</html>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Trabalhando com Eventos #03</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+        }
+        
+        .esquerda {
+            height: 100vh;
+            width: 50%;
+            background-color: coral;
+        }
+        
+        .direita {
+            height: 100vh;
+            width: 50%;
+            background-color: cornflowerblue;
+        }
+        
+        .item {
+            border: solid 5px black;
+            background-color: darkgrey;
+            color: white;
+            height: 100px;
+            font-size: 40px;
+            margin: 10px;
+            vertical-align: middle;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="esquerda" wm-dropzone>
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+    <div class="direita" wm-dropzone></div>
+    <script>
+        const items = document.querySelectorAll('[wm-dropzone] .item')/*Criando a variavel item e
+         adicionando via seletor todos os items que estão dentro do atributo dropzone.*/
+        items.forEach((item, index) => {
+            /* Vamos fazer um forEach para os items e os indices*/
+            item.draggable = true
+            /* Propriedade draggable já permite que arrastemos os items da pagina, porém até aqui
+            ainda não podemos deixa-los onde quisermos.*/
+            item.id = item.id || `draggable-item-${index}`
+            /* Defini id para o item, ficando assim dentro da div ex: draggable-item-1*/
+            item.ondragstart = e =>
+                e.dataTransfer.setData('item-id', e.target.id)
+        })
+        const dropzones = document.querySelectorAll('[wm-dropzone]')
+        dropzones.forEach(dropzone => {
+            dropzone.ondragover = e => e.preventDefault()
+            dropzone.ondrop = function(e) {
+                const id = e.dataTransfer.getData('item-id')
+                const item = document.getElementById(id)
+                /*e.target.appendChild(item)Comportamento interessante, vamos comentar para outro 
+                porém vale a anotação, os elementos podem ser movidos para dentro deles mesmos*/
+                dropzone.appendChild(item)
+                dropzone.insertBefore(item, dropzone.childNodes[0])/*Com essa linha a primeira dropzone
+                manten os elementos em ordem*/
+            }
+        })
+    </script>
+</body>
+
+</html>

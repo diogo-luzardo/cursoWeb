@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Acessando Classes</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class='conteudo exercicio'>
+    <div>
+        Classes
+    </div>
+    <script>
+        const classes = document.querySelector('div').classList
+        classes.add('destaque')
+        classes.remove('destaque')
+        classes.toggle('destaque')/* Função toggle adiciona ou remove depende está ou não aplicada.
+        neste casa na linha 18 removemos o destaque então o toggle vai adicionar novamente.*/
+        console.log(classes.contains('destaque'))
+        console.log(classes.length)
+        classes.toggle('destaque')
+        console.log(classes.length)
+        
+        /* Exemplo abaixo vamos criar e adicionar duas novas classes para a variavel classes.
+        depois rodar um for para pegar os elementos. */
+
+        classes.add('destaque1')
+        classes.add('destaque2')
+        console.log(classes.length)
+
+        for(let c of classes){
+            console.log(c)
+        }
+
+        /* mesmo for acima usando o forEach*/
+
+        classes.forEach(c => console.log(c))//Essa linha é exatamente igual o for acima.
+    
+    </script>
+</body>
+
+</html>

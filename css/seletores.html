@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Selectors</title>
+    <link rel="stylesheet" href="css/tag.css">
+    <style>
+
+        /* (*)Seletor universal */
+        /* * {
+            color: #ff0;
+            background-color: #f77;
+        } */ 
+
+        /* (.tag) Seletor pela classe */
+        /* .tag {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+        /* (#aprovados) Seletor pelo ID */
+        /* #aprovados {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+        /* (#aninhado > div) Seletor pega a div dentro do ID aninhado  ou filho direto*/
+        /* #aninhado > div {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+        /* (#aninhado section) Seletor pelo ID aninhado selecionado a section, como a section não é
+        um filho ou uma parente direto de aninhado não podemos usar o > para selecionar o campo selection*/
+        /* #aninhado section {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+        /*(p + ul) Seletor de irmão direto é representado pelo +
+        /* p + ul {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+        /*(p ~ ol) Seletor de irmão mais genérico ou distante, não precisa estar logo abaixo no código */
+        /* p ~ ol {
+            color: #ff0;
+            background-color: #f77;
+        } */
+        
+        /*([feira]) Seletor pela propriedade feira, o bloco onde estiver a propriedade feira ele aplica
+        o estilo
+        [feira] {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+        /*([feira=casa]) Seletor propriedade mais atributo.
+        [feira=casa] {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+
+        /* (span:nth-child(1)) Seletor esta pegando o primeiro filho de alguém que é do tipo
+        span 
+        span:nth-child(1){
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+        /* section > :nth-child(even), este seletor pega inicia pelo primeiro filho da section que seja 
+        par
+        section > :nth-child(even){
+            color: #ff0;
+            background-color: #f77;
+        }*/
+
+        section > span:nth-of-type(2){
+            color: #ff0;
+            background-color: #f77;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class='tag'>
+        <div class='tag'>
+            <p class='tag'>1</p>
+            <ul class='tag' feira='casa'>
+                <li>Arroz</li>
+                <li>Feijão</li>
+            </ul>
+            <ul class='tag' feira='escritorio empresa'>
+                <li>Café</li>
+                <li>Água</li>
+            </ul>
+            <ol id='aprovados' class='tag'>
+                <li>Maria</li>
+                <li>Pedro</li>
+                <li>Ana</li>
+            </ol>
+            <div id='aninhado' class='tag'>
+                <div class="tag">
+                    <section class='tag nolabel'>
+                        <span class='tag'>1</span>
+                        <p class='tag'>2</p>
+                        <span class='tag'>3</span>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/tag.js"></script>
+</body>
+
+</html>

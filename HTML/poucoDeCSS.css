@@ -1,0 +1,25 @@
+h1 {
+    font-size: 80px;
+    color: brown
+}
+
+.fundoVermelho{
+    background-color: red;
+    font-size: 30px;
+}
+
+.negrito {
+    font-weight: bold;
+    font-size: 30;
+}
+
+#textoPrincipal{
+    font-size: 40px;
+    font-weight: bold;
+    color: aliceblue;
+    padding: 10px;
+    background-color: black
+}
+body{
+    background-color: aqua
+}

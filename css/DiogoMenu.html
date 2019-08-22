@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>DIOGO</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        .cabecalho {
+            background-color: rgb(46, 42, 42);
+           
+        }
+
+        .menu ul {
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+            text-align: center;
+            font-size: 25px;
+        }
+
+        .menu ul li {
+            display: inline;
+        }
+
+        .menu ul li a {
+           padding: 2px 10px;   
+           color: white; 
+           font-family: 'Oswald';
+           text-decoration: none; 
+           display: inline-block;
+           transition: background-color 1s , color 1s , border-bottom 1s; /*Efetio no botão do menu, bem bonito*/
+           transition-timing-function: ease-out;
+        
+        }
+
+        .menu ul li a:hover {
+            background-color: rgb(43, 127, 153)
+
+        }       
+        /* .autenticacao {
+            float: right;
+        }  */
+
+
+    </style>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="logo">
+            <a href="#inicio">
+                <img src="http://files.cod3r.com.br/curso-web/logo.png" alt="Logo"  />
+            </a>
+        </div>
+        <button class="menu-toggle">
+            <i class="fa fa-lg fa-bars"></i>
+        </button>
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a href="#inicio">Início</a>
+                </li>
+                <li>
+                    <a href="#cursos">Cursos</a>
+                </li>
+                <li>
+                    <a href="#sobre">Sobre</a>
+                </li>
+                <li>
+                    <a href="#contato">Contato</a>
+                </li>
+            </ul>
+        </nav>
+        <aside class="autenticacao">
+            <a href="#login">Login</a>
+            <a href="#registar" class="botao destaque">Registrar</a>
+        </aside>
+    </header>
+
+    <script>
+        // ...
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Trabalhando com Eventos #01</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class="conteudo exercicio">
+    <div>
+        <a espera-um-pouco href="https://google.com.br">Google</a>
+        <!--onclick="navegarEm5s(event)"-->
+        <!-- Inserir a função on click que chama a função que criamos, obs importante
+        temos que usar o paramentro event e não pode ser nove das variaveis do JS
+    tem que ser event para capturar o evento -->
+    </div>
+    <script>
+        function navegarEm5s(e){
+            e.preventDefault()/*Esta função para o evento que acontece por padrão, neste caso ir para
+            o site do Google */
+            console.log('Saíndo em 5s ...')/* Este console é exibido no proprio Google chrome na aba
+            de inspecionar a pagina. */
+            setTimeout(() => {/* Usamos o setTimeout com uma arrow function para determinar o 5s de 
+            espera*/
+                const link = e.target /* Criamos a variavel link que recebe o evento que no caso vai
+                ser o click do mouse e seu destino que vai se o link, e armazena na variavel
+                link.*/ 
+                window.location.href = link.href /*Este windonw.logation.href seria o link que vai
+                para janela do novegador, neste caso substituimos pelo link recebido pelo click
+                temos que fazer isso pois ir ao link desejado*/
+            }, 5000) /* 5000 mile segundos que corresponde a 5 segundos. */
+        }
+
+        /* vamos para uma segunda abordagem chamando o onclick direto no javaScript pois como explicado
+        pelo professor não é uma aborgem muito interessante encher o HTML de codigos, apesar
+        de mais facil de encontrar as informações do codigo, não é bem visto e para essa 
+        segunda aborgem vamos comentar o onclick do HTML que esta dentro da TAG <a>*/
+
+        // const a = document.querySelector('a')
+        // a.onclick = navegarEm5s
+
+        /* Dificuldade desta abodagem é que é mais dificil de indentificar este evento no código
+        HTML pois vc percebe que está avendo uma manipulação no link porém não encontra nenhuma 
+        informação no HTML ou na TAG */
+
+        /* Vamos para a terceira abordagem que será criar um atributo personalizado, de novo vamos
+        comentar o exeplo acima para realizar o teste abaixo */
+
+        const a = document.querySelector('[espera-um-pouco]')
+        /* Nesta linha criamos a variavel a que esta recebendo de um seletor o atributo personalizado
+        com o nome espera um pouco que tem que estar dentro de [] pois é um atributo. */
+        a.onclick = navegarEm5s
+        /*Novamente a variavel a recebe a função navegarEm5s, porém ainda não entendi pq neste caso
+        não é utilizado os parenteses para chamar a função.
+        Temos que lembra de adicionar o atributo personalizado a TAG <a> do HTML */
+
+        /* Outra observação é que atributos personalizados não desconsiderados pelo navegar o que
+        deixa o software mais performatico */
+    </script>
+</body>

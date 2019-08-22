@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Texto</title>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <style>
+        /* ... */
+        * {
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        div {
+            font-size: 50px;
+        }
+
+        p {
+            /* Valores padrões */
+
+            font-size: 1em;
+            font-size: 100%;
+            font-size: 16px;
+            font-size: 12pt;
+
+            /* Valores absolutas */
+
+            font-size: 100px;/*Tamanho do pixel é relativo*/
+            font-size: 72pt;/*pontos equivale a uma polegada*/
+            font-size: 1in;/* polegada */
+
+            /* unidades relativas */
+
+            font-size: 2.2em; /* Pega o tamanho padrão do browse e multiplica por 2 ou o valor mais proximo
+            vamos usar o exemplo colocando o valor em uma div e como o paragrafo enta dentro de uma 
+            div ele pega o valor da div e multiplica por 2*/
+            font-size: 2.2rem; /* O rem pega referencia no html ou raiz, podemos alterar no HTMl e ele 
+            vai sempre multiplicar pela raiz*/
+            font-size: 50vh;/*Baseado em viewport*/
+            font-size: 10vw;
+
+            font-family: monospace;
+            font-family: Georgia, serif;
+            font-family: Verdana, sans-serif;
+            font-family: 'Indie Flower', cursive;
+            font-weight: 900;
+            font-style: italic;
+            text-transform: uppercase;
+            /* text-decoration: overline underline line-through; */
+            word-spacing: 10px;
+            letter-spacing: 10px;
+            line-height: 2.5em;
+            text-align: center;
+        }
+
+        .botao {
+            font-size: 28px;
+            text-decoration: none;
+            padding: 10px 30px;
+            border-radius: 25px;
+        }
+
+        .destaque { 
+            color: white;
+            background: tomato;
+            box-shadow: 2px 2px 1px 1px black
+        }
+
+        .destaque:active {
+            box-shadow: none;
+            background: rgb(241, 174, 163)
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>
+            Que texto
+            <br>legal!!!
+        </p>
+    </div>
+    <a href="http://google.com" class="botao destaque">Google</a>
+</body>
+
+</html>

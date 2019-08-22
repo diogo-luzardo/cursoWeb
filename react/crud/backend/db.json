@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "id": 2,
+      "name": "Aline Vidal",
+      "email": "alivlevlo@gmail.com"
+    },
+    {
+      "name": "Diogo Faria",
+      "email": "diogohxcx@gmail.com",
+      "id": 3
+    },
+    {
+      "name": "Arthur Vidal",
+      "email": "avidal@gmail.com",
+      "id": 4
+    }
+  ]
+}

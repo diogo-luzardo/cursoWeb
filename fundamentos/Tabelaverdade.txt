@@ -1,0 +1,25 @@
+verdadeiro e verdadeiro -> verdadeiro
+verdadeiro e falso -> falso
+falso e qualquer coisa -> falso
+
+op1 e op2 e op3 e op4 -> verdadeiro
+
+----------------------------------
+
+verdadeiro ou qualquercoisa -> verdadeiro
+falso ou verdadeiro -> verdadeiro
+falso ou falso -> falso
+
+verdadeiro xor verdadeiro -> falso
+verdadeiro xor falso -> verdadeiro
+falso xor verdadeiro -> verdadeiro
+falso xor falso -> falso
+
+xor == ou exclusivo - tem que ser sempre diferente
+
+---------------------------------------
+
+! = operador not - negacao logica
+
+!verdadeiro -> falso
+!falso -> verdadeiro

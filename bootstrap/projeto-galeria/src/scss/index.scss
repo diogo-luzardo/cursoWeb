@@ -1,0 +1,13 @@
+//Este primeiro import está importanto o bootstrap inteiro, poderiamos importar somente o que 
+//precisar, fica a nosso critério
+@import "~bootstrap/scss/bootstrap";
+
+//Na linha abaixo alteramos o patch do arquivo fonte para mostrar onde encontrar a font
+//awesome
+$fa-font-path: "~font-awesome/fonts";
+
+//Aqui importamos o fonte awesome
+@import "~font-awesome/scss/font-awesome";
+
+//Aqui importamos o custom gera o css final.
+@import "custom";

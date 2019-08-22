@@ -1,0 +1,1 @@
+Os arquivos que vierem do upload do exercicio xmlHttpRequest3.html são salvos nesta pasta

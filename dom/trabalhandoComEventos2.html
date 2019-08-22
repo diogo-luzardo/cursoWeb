@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Trabalhando com Eventos #02</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class="conteudo exercicio">
+    <div>Elemento</div>
+    <script>
+        const item = document.querySelector('div')/* Criamos a variavel item que recebe do seletor
+        a div inteira*/
+        item.style.position = 'absolute'/*Aqui pegamos a variavel item que tem a div e aplicamos
+        o style position como absolute pois vamos arrastar pela tela*/
+
+        item.onmousemove = e =>{
+            const item = e.target
+            item.style.cursor = 'move'
+            if (e.buttons) {
+                item.style.top = `${e.clientY - (item.clientHeight / 2)}px`
+                item.style.left = `${e.clientX - (item.clientWidth /2)}px`
+            }    
+        }
+    </script>
+</body>
